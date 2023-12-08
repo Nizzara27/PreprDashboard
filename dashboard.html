@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User dashboard - Prepr Network</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="module" src="script.js"></script>
+    <style>
+        html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+    </style>
+  </head>
+  <body>
+    <nav class="header">
+        <a href="#" class="logo">
+            <img
+            src="https://d3f06rtlkr354b.cloudfront.net/public/front/img/logoNew.png"
+            class="preprlabslogo"
+            alt="preprlogo"
+          />
+        </a>
+        <!-- Navigation Tabs -->
+        <div class="header-right" >
+            <a href="#" class="w3-mobile w3-hover-text-green" style="margin-top: 5px;">Explore</a>
+            <a href="#" class="w3-mobile w3-hover-text-green" style="margin-top: 5px;">Dashboard</a>
+            <a href="#" class="w3-mobile w3-hover-text-green" style="margin-top: 5px;">My Labs</a>
+            <a href="#" class="w3-mobile w3-hover-text-green" style="margin-top: 5px;">My Challenges</a>
+            <a href="#" class="w3-mobile w3-hover-text-green" style="margin-top: 5px;">My Projects</a>
+            <a href="#" class="w3-mobile w3-hover-text-green" style="margin-top: 5px;">Career Explorer</a>
+            
+            <a href="#" class="w3-mobile">
+                <img
+                style="width: 27px; height: 27px;"
+                src="https://preprlabs.org/assets/images/header/bell-icon.svg"
+                />
+            </a>
+            <a href="#" class="w3-mobile">
+                <img
+                style="width: 27px; height: 27px"
+                src="https://preprlabs.org/assets/images/header/inbox-icon.svg"
+                />
+            </a>
+            <a href="#" class="w3-mobile">
+                <img
+                style="width: 27px; height: 27px"
+                src="https://preprlabs.org/assets/images/header/help-icon.svg"
+                />
+            </a>
+        </div>
+    </nav>
+    <main>
+        <!-- Page Container-->
+        <div class="w3-container" style="max-width: 1400px;">
+            <p style="font-size: 1.5em;font-weight: bold;color: black;"> Welcome, Nileshana. <a href="#" style="font-size: 1rem;color: forestgreen"> Complete Profile </a></p>
+            <!-- The Grid-->
+            <div class="grid">
+                <!-- Top row-->
+                <div style="margin-top: 1rem;">
+                    <!-- Left Coloumn-->
+                    <div class="w3-third w3-container ">
+                        <div class="w3-card w3-round w3-white card">
+                            <div class="w3-container">
+                                <h4 class="" style="padding: 0;font-size: 15px;font-weight: bold;">My Progress</h4>
+                                <ul class="w3-bar w3-right " >
+                                    <li class="w3-bar-item w3-button">
+                                        <a class="nav-link " style="color: green;
+                                        border-bottom: 2px solid #27AE60;">Challenges</a>
+                                    </li>
+                                    <li class="w3-bar-item w3-button">
+                                        <a class="nav-link ">Labs</a>                                        
+                                    </li>
+                                    <li class="w3-bar-item w3-button">
+                                        <a class="nav-link ">Resources</a>                                        
+                                    </li>
+                                </ul>
+
+                                <p style="color: grey;">You joined Preprlabs on Nov 1, 2023, here is your Challenge journey.</p>
+                                <canvas id="organizationChallenge-chart" style="display: block; height: 160px; width: 160px;" width="240" height="240" class="chartjs-render-monitor"></canvas>
+                                <ul class="w3-bar" style="text-align: center;">
+                                    <li>
+                                        <span>Project Submitted: </span>
+                                        <span>6</span>
+                                    </li>
+                                    <li>
+                                        <span>Project Created: </span>
+                                        <span>8</span>
+                                    </li>
+                                    <li>
+                                        <span>Invited: </span>
+                                        <span>8</span>
+                                    </li>
+                                    <li>
+                                        <span>Followed: </span>
+                                        <span>0</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Middle Coloumn-->
+                    <div class="w3-third w3-container leftoff_container w3-cell">
+                        <div class="w3-card w3-round w3-white card">
+                            <div class="w3-container">
+                                <div class="cardheader">
+                                    <h4 class="w3-left" style="padding: 0;font-size: 20px;font-weight: bold;">Continue Where You Left Off</h4>
+                                </div>
+                                <div class="w3-container">
+                                    <p style="color: grey;"> Start your PreprLabs journey now!</p>
+                                    <div class="w3-center" style="margin-top: 20px; margin-left: 15px;">
+                                        <img class="w3-center journeyimg" src="https://preprlabs.org/assets/images/dashboard/last-visited-icon.png">
+                                        
+                                    </div>
+                                    <div class="w3-center"  style="margin-left: -20px;">
+                                        <div class="w3-button w3-green">
+                                            Explore More
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Coloumn-->
+                    <div class="w3-third w3-container deadline_container w3-cell">
+                        <div class="w3-card w3-round w3-white card">
+                            <div class="w3-container ">
+                                <div class="cardheader">
+                                    <h4 class="w3-left" style="padding: 0;font-size: 20px;font-weight: bold;">Upcoming Challenge Deadlines</h4>
+                                </div>
+                                <div class="w3-container">
+                                    <div class="" style="overflow: hidden; border-bottom: 2px solid lime;">
+                                        <img style="float: left;" src="https://preprlabs.org/assets/images/dashboard/calendar-normal.svg" alt="">
+                                    
+                                        <div style="float: right;">
+                                            <p> Frontend Developer Challenge 3: Dashboard</p>
+                                            <p style="color: grey;"> Due December 13 at 3:37PM</p>
+                                        </div>
+                                    </div> 
+                                    <div class="" style="overflow: hidden; border-bottom: 2px solid lime;">
+                                        <img style="float: left;" src="https://preprlabs.org/assets/images/dashboard/calendar-normal.svg" alt="">
+                                    
+                                        <div style="float: right;">
+                                            <p> Frontend Developer Challenge 4: Accessibility Integration</p>
+                                            <p style="color: grey;"> Due December 14 at 3:37PM</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Middle row -->
+                <div class="w3-row">
+                    <!-- Middle Coloumn-->
+                    <div class="w3-twothird w3-container m10 leaderboard_container">
+                        <div class="w3-card w3-round w3-white card">
+                            <div class="w3-container ">
+                                <div class="cardheader">
+                                    <h4 class="w3-left" style="padding: 0;font-size: 20px;font-weight: bold;color: forestgreen;">Leaderboard</h4>
+                                    <div class="w3-button w3-green w3-right" style="margin-top: 5px;">
+                                        View Leaderboard
+                                    </div>
+                                </div>
+                                <div class="w3-container " style="margin-top: 70px;overflow: hidden;">
+                                    <table class="w3-table w3-striped ">
+                                      <thead>
+                                        <tr class="w3-light-green">
+                                          <th>#</th>
+                                          <th>Username</th>
+                                          <th>Learning Points</th>
+                                          <th>Learning Rank</th>
+                                          <th>Achievements</th>
+                                        </tr>
+                                      </thead>
+                                    <tr class="w3-pale-green">
+                                      <td>27</td>
+                                      <td>Nileshana Abeysinghe (You)</td>
+                                      <td>2700</td>
+                                      <td>10</td>
+                                      <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>James Smith</td>
+                                        <td>15673</td>
+                                        <td>132</td>
+                                        <td>18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Ryan Dyan</td>
+                                        <td>13673</td>
+                                        <td>102</td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Bob Fisher</td>
+                                        <td>11653</td>
+                                        <td>95</td>
+                                        <td>12</td>
+                                    </tr>
+                                    </table>
+                                  </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Coloumn-->
+                    <div class="w3-third w3-container m10 achievement_container">
+                        <div class="w3-card w3-round w3-white card">
+                            <div class="w3-container ">
+                                <div class="cardheader">
+                                    <h4 class="w3-left" style="padding: 0;font-size: 20px;font-weight: bold;">Latest Achievement</h4>
+                                </div>
+                                <div class="w3-container w3-center" style="margin-top: 60px;">
+                                    <img src="https://d3f06rtlkr354b.cloudfront.net/uploads/trophy/RfQSF3xELu.png">
+                                    <p style="color: darkgreen;font-weight: bold;margin-top: 10px;"> Participant </p>
+
+                                </div>
+                                <div class="w3-container w3-center" style="margin-top: 10px;">
+                                    <div class="w3-button w3-green">View Detail</div>
+                                </div>
+                                <div class="w3-container w3-center">
+                                    <div class="w3-button w3-blue-gray" style="margin-top: 5px;">
+                                        <i class="iconlstd-Share"></i>
+                                        Share
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom row -->
+                <div class="w3-row">
+                    <!-- Left Coloumn-->
+                    <div class="w3-third w3-container m3 progress_container">
+                        <div class="w3-card w3-round w3-white card">
+                            <div class="w3-container ">
+                                <div class="cardheader">
+                                    <img style="height: 20px; width: 20px; margin-top: 5px;float: left;" src="https://d3f06rtlkr354b.cloudfront.net/public/front/img/Lab.svg">
+                                    <h4  style="margin-left: 30px;font-size: 20px;font-weight: bold; color: limegreen">Labs</h4>
+                                </div>
+                                
+                            </div>
+                            <ul class="navbar">
+                                <li class="navitem" style="border-bottom: 4px solid #239564; color: #239564;">
+                                    My Labs
+                                    <span class="w3-green w3-circle" >
+                                        3
+                                    </span>
+                                </li>
+                                <li class="navitem" style="border-bottom: 3px solid grey; color: black;">
+                                    Invited
+                                </li>
+                            </ul>
+                            <div class="w3-container">
+                                <div class="w3-container" style="border-bottom:  1px solid grey; margin-top: 10px;">
+                                    <span class="w3-text-green">
+                                        Web Developer
+                                    </span>
+                                    <div class="">
+                                        <img src="https://d3f06rtlkr354b.cloudfront.net/uploads/labs/R0gpwVFsCiJdNMwLvsJRMFTwh.png" style="width: 70px">
+                                        <p style="overflow: auto; font-size: small; color: grey">
+                                            Front end web developer id responsible for designing, coding, and modifying webpage using standard HTML...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Middle Coloumn-->
+                    <div class="w3-third w3-container m10 leftoff_container">
+                        <div class="w3-card w3-round w3-white card">
+                            <div class="w3-container ">
+                                <div class="cardheader">
+                                    <img style="height: 20px; width: 20px; margin-top: 5px;float: left;" src="https://d3f06rtlkr354b.cloudfront.net/public/front/img/Lab.svg">
+                                    <h4  style="margin-left: 30px;font-size: 20px;font-weight: bold; color: limegreen">Challenges</h4>
+                                </div>
+                                
+                            </div>
+                            <ul class="navbar">
+                                <li class="navitem" style="border-bottom: 4px solid #239564; color: #239564;">
+                                    My Challenges
+                                    <span class="w3-green w3-circle" >
+                                    2
+                                    </span>
+                                </li>
+                                <li class="navitem" style="border-bottom: 3px solid grey; color: black;">
+                                    Invited
+                                </li>
+                                <li class="navitem" style="border-bottom: 3px solid grey; color: black;">
+                                    Following
+                                    <span class="w3-green w3-circle" >
+                                        1
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="w3-container">
+                                <div class="w3-container" style="border-bottom:  1px solid grey; margin-top: 10px;">
+                                    <span class="w3-text-green">
+                                        Web Developer
+                                    </span>
+                                    <div class="">
+                                        <img src="https://d3f06rtlkr354b.cloudfront.net/uploads/labs/R0gpwVFsCiJdNMwLvsJRMFTwh.png" style="width: 70px">
+                                        <p style="overflow: auto; font-size: small; color: grey">
+                                            Front end web developer id responsible for designing, coding, and modifying webpage using standard HTML...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Coloumn-->
+                    <div class="w3-third w3-container m10 deadline_container">
+                        <div class="w3-card w3-round w3-white card">
+                            <div class="w3-container ">
+                                <div class="cardheader" style="display: flex; justify-content: space-between;">
+                                    <div>
+                                        <img style="height: 20px; width: 20px; margin-top: 15px;float: left;" src="https://d3f06rtlkr354b.cloudfront.net/public/front/img/Lab.svg">
+                                        <h4  style="margin-left: 30px;font-size: 20px;font-weight: bold; color: limegreen">Projects</h4>
+                                    </div>
+                                    <button class="w3-button w3-green" style="display: inline-block; width: fit-content;">
+                                        <a href="create-project.html"> 
+                                            Create
+                                        </a>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <ul class="navbar">
+                                <li class="navitem" style="border-bottom: 4px solid #239564; color: #239564;">
+                                    My projects
+                                    <span class="w3-green w3-circle" >
+                                    3
+                                    </span>
+                                </li>
+                                <li class="navitem" style="border-bottom: 3px solid grey; color: black;">
+                                    Need to assess
+                                </li>
+                                <li class="navitem" style="border-bottom: 3px solid grey; color: black;">
+                                    Invited
+                                    <span class="w3-green w3-circle" >
+                                        1
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="w3-container">
+                                <div class="w3-container" style="border-bottom:  1px solid grey; margin-top: 10px;">
+                                    <span class="w3-text-green">
+                                        Web Developer
+                                    </span>
+                                    <div class="">
+                                        <img src="https://d3f06rtlkr354b.cloudfront.net/uploads/labs/R0gpwVFsCiJdNMwLvsJRMFTwh.png" style="width: 70px">
+                                        <p style="overflow: auto; font-size: small; color: grey">
+                                            Front end web developer id responsible for designing, coding, and modifying webpage using standard HTML...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
